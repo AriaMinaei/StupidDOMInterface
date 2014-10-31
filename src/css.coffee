@@ -10,24 +10,22 @@ getCSSProp = do ->
 
 			return prop if el.style[prop] isnt undefined
 
-		false
+		return
 
 cssPropertySetter = (prop) ->
 
 	actualProp = getCSSProp getPossiblePropsFor prop
 
-	return (->) unless actualProp
+	return (->) unless actualProp?
 
 	(el, v) -> el.style[actualProp] = v
 
 getPossiblePropsFor = (prop) ->
 
+	rest = prop.charAt(0).toUpperCase() + prop.substr(1, prop.length)
+
 	[
-		'webkit' + prop[0].toUpperCase() + prop.substr(1, prop.length),
-
-		'moz' + prop[0].toUpperCase() + prop.substr(1, prop.length),
-
-		prop
+		"webkit#{rest}", "moz#{rest}", "o#{rest}", "ms#{rest}", prop
 	]
 
 module.exports = css =
@@ -52,3 +50,9 @@ module.exports = css =
 	rgb: (r, g, b) ->
 
 		'rgb(' + r + ', ' + g + ', ' + b + ')'
+
+	canHaveProp: (prop) ->
+
+		actualProp = getCSSProp getPossiblePropsFor prop
+
+		actualProp?
