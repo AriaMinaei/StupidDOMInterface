@@ -1,5 +1,7 @@
 css = require './css'
 
+
+
 module.exports = class StupidDOMInterface
 
 	constructor: (node, initial) ->
@@ -38,7 +40,17 @@ module.exports = class StupidDOMInterface
 
 		@node = node
 
-		@_props = new Float32Array 28
+		if Float32Array?
+
+			@_props = new Float32Array 28
+
+		else
+
+			@_props = []
+
+			for i in [0..28]
+
+				@_props.push 0
 
 		@_map = {}
 
