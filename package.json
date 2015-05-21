@@ -1,7 +1,7 @@
 {
-  "name": "stupid-dom-interface",
-  "version": "0.1.0-beta.10",
-  "description": "Simple JS library for setting and getting DOM element styles",
+  "name": "@ariaminaei/stupid-dom-interface",
+  "version": "1.0.0",
+  "description": "Simple class for setting and getting DOM element properties",
   "main": "lib/StupidDOMInterface.js",
   "scripts": {
     "prepublish": "coffee --bare --compile --output ./lib ./src",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pouriaMaleki/StupidDOMInterface.git"
+    "url": "https://github.com/AriaMinaei/stupid-dom-interface.git"
   },
   "keywords": [
     "DOM",
@@ -18,7 +18,7 @@
   "author": "pouriaMaleki",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pouriaMaleki/StupidDOMInterface/issues"
+    "url": "https://github.com/AriaMinaei/stupid-dom-interface/issues"
   },
   "dependencies": {
   },
