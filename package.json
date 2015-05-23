@@ -1,11 +1,10 @@
 {
-  "name": "stupid-dom-interface",
+  "name": "@ariaminaei/stupid-dom-interface",
   "version": "1.0.0",
   "description": "Simple class for setting and getting DOM element properties",
   "main": "lib/StupidDOMInterface.js",
   "scripts": {
     "prepublish": "coffee --bare --compile --output ./lib ./src",
-    "preinstall": "coffee --bare --compile --output ./lib ./src",
     "watch": "jitter src lib -b"
   },
   "repository": {
@@ -20,8 +19,6 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/AriaMinaei/stupid-dom-interface/issues"
-  },
-  "dependencies": {
   },
   "devDependencies": {
     "coffee-script": "~1.7.1",
