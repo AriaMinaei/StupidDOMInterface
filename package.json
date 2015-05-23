@@ -1,5 +1,5 @@
 {
-  "name": "@ariaminaei/stupid-dom-interface",
+  "name": "stupid-dom-interface",
   "version": "1.0.0",
   "description": "Simple class for setting and getting DOM element properties",
   "main": "lib/StupidDOMInterface.js",
